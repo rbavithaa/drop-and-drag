@@ -1,25 +1,20 @@
 function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-
-function allowDrop(event) {
-    event.preventDefault();
+    var questionSetId = event.target.closest('.options').id;
+    event.dataTransfer.setData("text", questionSetId + ':' + event.target.id);
 }
 
 function drop(event) {
     event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    var draggedElement = document.getElementById(data);
+    var data = event.dataTransfer.getData("text").split(':');
+    var draggedSetId = data[0];
+    var draggedElementId = data[1];
+    
+    var draggedElement = document.getElementById(draggedElementId);
     var dropTarget = event.target;
 
-    // Handle dropping logic only if the dragged element and drop target are in the same set
-    var draggedSet = draggedElement.closest('.options');
-    var dropSet = dropTarget.closest('.options');
-    
-    if (draggedSet && dropSet && draggedSet === dropSet) {
+    // Check if the dragged element and drop target belong to the same question set
+    if (dropTarget.classList.contains("blank") && draggedSetId === dropTarget.closest('.question-container').querySelector('.options').id) {
         // Fill in the blank with the dragged text
-        if (dropTarget.classList.contains("blank")) {
-            dropTarget.querySelector(".answer").textContent = draggedElement.textContent;
-        }
+        dropTarget.querySelector(".answer").textContent = draggedElement.textContent;
     }
 }
