@@ -1,19 +1,18 @@
-function allowDrop(event) {
-    event.preventDefault();
-    return false;  // Added to ensure the event is not propagated further
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.textContent);
 }
 
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.innerText);
+function allowDrop(event) {
+    event.preventDefault();
 }
 
 function drop(event) {
     event.preventDefault();
-    var draggedText = event.dataTransfer.getData("text");
-    var targetElement = event.target;
+    var data = event.dataTransfer.getData("text");
+    var dropTarget = event.target;
 
-    if (targetElement.classList.contains('blank')) {
-        var answerSpan = targetElement.querySelector('.answer');
-        answerSpan.textContent = draggedText;
+    // Handle dropping logic, e.g., fill in the blank with the dragged text
+    if (dropTarget.classList.contains("blank")) {
+        dropTarget.querySelector(".answer").textContent = data;
     }
 }
