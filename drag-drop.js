@@ -12,8 +12,14 @@ function drop(event) {
     var draggedElement = document.getElementById(data);
     var dropTarget = event.target;
 
-    // Handle dropping logic, e.g., fill in the blank with the dragged text
-    if (dropTarget.classList.contains("blank")) {
-        dropTarget.querySelector(".answer").textContent = draggedElement.textContent;
+    // Handle dropping logic only if the dragged element and drop target are in the same set
+    var draggedSet = draggedElement.closest('.options');
+    var dropSet = dropTarget.closest('.options');
+    
+    if (draggedSet && dropSet && draggedSet === dropSet) {
+        // Fill in the blank with the dragged text
+        if (dropTarget.classList.contains("blank")) {
+            dropTarget.querySelector(".answer").textContent = draggedElement.textContent;
+        }
     }
 }
