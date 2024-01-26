@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill in the blanks</title>
+</head>
+<body>
+    <div class="question-container" id="biology-question">
+        <p>Label the parts of a flower by dragging and dropping the correct terms into the blanks:</p>
+        <div id="blank1" class="blank" droppable="true" ondrop=drop ondragover=allowDrop>The female reproductive organ of a flower is called the <span id="answer1" class="answer">________</span>.</div>
+        <div id="blank2" class="blank" droppable="true" ondrop=drop ondragover=allowDrop>The male reproductive organ of a flower is known as the <span id="answer2" class="answer">________</span>.</div>
+        <div id="blank3" class="blank" droppable="true" ondrop=drop ondragover=allowDrop>The outermost whorl of a flower, usually green and protective, is called the <span id="answer3" class="answer">________</span>.</div>
+        <div id="blank4" class="blank" droppable="true" ondrop=drop ondragover=allowDrop>The brightly colored part of the flower that attracts pollinators is the <span id="answer4" class="answer">________</span>.</div>
+    
+        <div class="options">
+            <div class="option" draggable="true" ondragstart="drag()">Pistil</div>
+            <div class="option" draggable="true" ondragstart="drag()">Stamen</div>
+            <div class="option" draggable="true" ondragstart="drag()">Sepal</div>
+            <div class="option" draggable="true" ondragstart="drag()">Petals</div>
+        </div>
+    </div>
+    
+    <div class="question-container" id="history-question">
+        <p>Place the correct historical events into the blanks to complete the timeline:</p>
+        <div id="blank5" class="blank" ondrop=drop ondragover="allowDrop(event)">The signing of the Declaration of Independence occurred in the year <span id="answer5" class="answer" contenteditable="true">________</span>.</div>
+        <div id="blank6" class="blank" ondrop=drop ondragover="allowDrop(event)">The Battle of Gettysburg, a significant Civil War battle, took place in <span id="answer6" class="answer" contenteditable="true">________</span>.</div>
+        <div id="blank7" class="blank" ondrop=drop ondragover="allowDrop(event)">The fall of the Berlin Wall marked the end of the Cold War in <span id="answer7" class="answer" contenteditable="true">________</span>.</div>
+        <div id="blank8" class="blank" ondrop=drop ondragover="allowDrop(event)">The Apollo 11 mission successfully landed on the moon in <span id="answer8" class="answer" contenteditable="true">________</span>.</div>
+    
+        <div class="options">
+            <div class="option" draggable="true" ondragstart="drag()">1776</div>
+            <div class="option" draggable="true" ondragstart="drag()">1863</div>
+            <div class="option" draggable="true" ondragstart="drag()">1989</div>
+            <div class="option" draggable="true" ondragstart="drag()">1969</div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
