@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fill in the blanks</title>
-    <link rel="stylesheet" href="drag-drop.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <div class="question-container" id="history-question">
-        <p>Fill in the blanks about India's Independence:</p>
-        <div id="blank9" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">India Got Independence on <span id="answer9" class="answer">________</span> from <span id="answer10" class="answer">________</span> with a lot of <span id="answer11" class="answer">________</span>.</div>
-    
-        <div class="options" id="options9">
-            <div id="option9" class="option" draggable="true" ondragstart="drag(event)">15th Aug</div>
-            <div id="option10" class="option" draggable="true" ondragstart="drag(event)">British</div>
-            <div id="option11" class="option" draggable="true" ondragstart="drag(event)">Struggle</div>
+    <div class="question-container q1" id="biology-question">
+        <p>Label the parts of a flower by dragging and dropping the correct terms into the blanks:</p>
+        <div id="q1" class="question">The female reproductive organ of a flower is called the 
+            <span id="q1" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.</div>
+        <div id="q1" class="question">The male reproductive organ of a flower is known as the 
+            <span id="q1" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.</div>
+        <div id="q1" class="question">The outermost whorl of a flower, usually green and protective, is called the 
+            <span id="q1" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.
+        </div>
+        <div id="q1" class="question">The brightly colored part of the flower that attracts pollinators is the 
+            <span id="q1" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.</div>
+
+        <div class="options">
+            <div class="option" draggable="true" ondragstart="drag(event)">Pistil</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">Stamen</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">Sepal</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">Petals</div>
         </div>
     </div>
 
-    <div class="question-container" id="gandhi-question">
-        <p>Fill in the blanks about Mahatma Gandhi's birth:</p>
-        <div id="blank10" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">Mahatma Gandhi was born on <span id="answer12" class="answer">____ of <span id="answer13" class="answer">_____</span> in the year <span id="answer14" class="answer">____</span>.</div>
+    <div class="question-container" id="history-question">
+        <p>Place the correct historical events into the blanks to complete the timeline:</p>
+        <div id="q2" class="question">The signing of the Declaration of Independence occurred in the year
+            <span id="q2" class="blank" droppable="true" ondrop="drop(event)"
+                ondragover="allowDrop(event)">________</span>.
+        </div>
+        <div id="q2" class="question">The Battle of Gettysburg, a significant Civil War battle, took place in
+            <span id="q2" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.
+        </div>
+        <div id="q2" class="question">The fall of the Berlin Wall marked the end of the Cold War in
+            <span id="q2" class="blank" droppable="true" ondrop="drop(event)" ondragover="allowDrop(event)">________</span>.
+        </div>
+        <div id="q2" class="question">The Apollo 11 mission successfully landed on the moon in
+            <span id="q2" class="blank" droppable="true" ondrop="drop(event)"
+                ondragover="allowDrop(event)">________</span>.
+        </div>
     
-        <div class="options" id="options10">
-            <div id="option12" class="option" draggable="true" ondragstart="drag(event)">2nd</div>
-            <div id="option13" class="option" draggable="true" ondragstart="drag(event)">October</div>
-            <div id="option14" class="option" draggable="true" ondragstart="drag(event)">1989</div>
+        <div class="options">
+            <div class="option" draggable="true" ondragstart="drag(event)">1776</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">1863</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">1989</div>
+            <div class="option" draggable="true" ondragstart="drag(event)">1969</div>
         </div>
     </div>
-    
-    <script src="drag-drop.js"></script>
 </body>
+
 </html>
